@@ -1,0 +1,4 @@
+@prefix ns1: <http://example.org/> .
+
+<http://example.org/writer/victor_hugo> ns1:wrote <http://example.org/book/les_miserables> .
+

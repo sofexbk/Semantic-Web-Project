@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Query Results</h1>
+    {% if results.error %}
+        <p>Error: {{ results.error }}</p>
+    {% else %}
+        <ul>
+        {% for result in results["results"]["bindings"] %}
+            <li>
+                {% for key, value in result.items() %}
+                    {{ key }}: {{ value.value }}<br>
+                {% endfor %}
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    <a href="/">Back to Home</a>
+</body>
+</html>
